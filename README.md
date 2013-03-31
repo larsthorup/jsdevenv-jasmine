@@ -41,18 +41,6 @@ run all tests (results in output\testresults)
 
     grunt test
 
-produce test coverage statistics (in output\coverage\out\coverage.html)
+produce test coverage statistics (in output\coverage\index.html)
 
-    grunt coverage
-
-serve source application
-
-    grunt serve:src wait
-
-compress and minify (in output\bundle)
-
-    grunt bundle
-
-serve bundled application
-
-    grunt serve:bundle wait
+    grunt coverage:html

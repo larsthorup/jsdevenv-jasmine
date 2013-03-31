@@ -1,4 +1,4 @@
-/*global module*/
+/*global module, require*/
 module.exports = function (grunt) {
     'use strict';
 
@@ -40,7 +40,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     gruntConfig.jasmine = {
         src: {
-            src: 'src/js/**/*.js',
+            src: [
+                'src/js/**/*.js',
+                '!src/js/**/*.test.js'
+            ],
             options: {
                 specs: 'src/js/**/*.test.js',
                 junit: {
@@ -49,7 +52,7 @@ module.exports = function (grunt) {
             }
         }
     };
-    grunt.registerTask('test', 'jasmine');
+    grunt.registerTask('test', 'jasmine:src');
 
     // watch
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -62,7 +65,18 @@ module.exports = function (grunt) {
 
 
     // coverage
-
+    gruntConfig.jasmine.istanbulHtml = {
+        src: gruntConfig.jasmine.src.src,
+        options: {
+            specs: gruntConfig.jasmine.src.options.specs,
+            template: require('grunt-template-jasmine-istanbul'),
+            templateOptions: {
+                coverage: 'output/coverage/coverage.json',
+                report: 'output/coverage'
+            }
+        }
+    };
+    grunt.registerTask('coverage:html', 'jasmine:istanbulHtml');
 
     // grunt
     grunt.initConfig(gruntConfig);
