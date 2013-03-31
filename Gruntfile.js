@@ -77,6 +77,23 @@ module.exports = function (grunt) {
         }
     };
     grunt.registerTask('coverage:html', 'jasmine:istanbulHtml');
+    gruntConfig.jasmine.istanbulCobertura = {
+        src: gruntConfig.jasmine.istanbulHtml.src,
+        options: {
+            specs: gruntConfig.jasmine.istanbulHtml.options.specs,
+            template: gruntConfig.jasmine.istanbulHtml.options.template,
+            templateOptions: {
+                coverage: gruntConfig.jasmine.istanbulHtml.options.template,
+                report: {
+                    type: 'cobertura',
+                    options: {
+                        dir: 'output/coverage/cobertura'
+                    }
+                }
+            }
+        }
+    };
+    grunt.registerTask('coverage:cobertura', 'jasmine:istanbulCobertura');
 
     // grunt
     grunt.initConfig(gruntConfig);
