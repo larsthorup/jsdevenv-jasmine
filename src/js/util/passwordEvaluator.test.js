@@ -1,4 +1,7 @@
+/*global window describe it expect */
 describe('util.passwordEvaluator', function () {
+    'use strict';
+
     var pw = window.passwordEvaluator;
 
     it('should return 0 when password is really bad', function () {

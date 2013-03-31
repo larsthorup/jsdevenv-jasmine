@@ -1,9 +1,9 @@
-jsdevenv
-========
+jsdevenv-jasmine
+================
 
-[![Build Status](https://travis-ci.org/larsthorup/jsdevenv.png)](https://travis-ci.org/larsthorup/jsdevenv)
+[![Build Status](https://travis-ci.org/larsthorup/jsdevenv-jasmine.png)](https://travis-ci.org/larsthorup/jsdevenv-jasmine)
 
-A sample build environment for JavaScript projects.
+A sample build environment for JavaScript projects using Jasmine for testing
 
 Prerequisites:
 
@@ -23,7 +23,7 @@ run all tests
 
 run app
 
-    http://localhost:8080/
+    file://(path-to)/src/index.html
 
 
 From the command line

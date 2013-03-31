@@ -1,4 +1,7 @@
+/*global window*/
 (function (window) {
+    'use strict';
+
     window.passwordEvaluator = {
         strength: function (password) {
             var result = 0, digitCount, alphaCount, specialCount, categoryCount, lowerCount, upperCount;
