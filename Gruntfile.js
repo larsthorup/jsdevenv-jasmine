@@ -94,6 +94,7 @@ module.exports = function (grunt) {
         }
     };
     grunt.registerTask('coverage:cobertura', 'jasmine:istanbulCobertura');
+    grunt.registerTask('coverage', ['coverage:html', 'coverage:cobertura']);
 
     // grunt
     grunt.initConfig(gruntConfig);

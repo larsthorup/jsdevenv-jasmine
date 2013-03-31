@@ -41,6 +41,10 @@ run all tests (results in output\testresults)
 
     grunt test
 
-produce test coverage statistics (in output\coverage\index.html)
+produce test coverage statistics in html format (in output\coverage\index.html)
 
     grunt coverage:html
+
+produce test coverage statistics in cobertura format (in output\coverage\cobertura)
+
+    grunt coverage:cobertura
