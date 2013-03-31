@@ -37,7 +37,19 @@ module.exports = function (grunt) {
 
 
     // test
-
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
+    gruntConfig.jasmine = {
+        src: {
+            src: 'src/js/**/*.js',
+            options: {
+                specs: 'src/js/**/*.test.js',
+                junit: {
+                    path: 'output/testresults'
+                }
+            }
+        }
+    };
+    grunt.registerTask('test', 'jasmine');
 
     // watch
     grunt.loadNpmTasks('grunt-contrib-watch');
