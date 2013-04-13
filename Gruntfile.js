@@ -65,36 +65,22 @@ module.exports = function (grunt) {
 
 
     // coverage
-    gruntConfig.jasmine.istanbulHtml = {
+    gruntConfig.jasmine.istanbul = {
         src: gruntConfig.jasmine.src.src,
         options: {
             specs: gruntConfig.jasmine.src.options.specs,
             template: require('grunt-template-jasmine-istanbul'),
             templateOptions: {
                 coverage: 'output/coverage/coverage.json',
-                report: 'output/coverage'
+                report: [
+                    {type: 'html', options: {dir: 'output/coverage'}},
+                    {type: 'cobertura', options: {dir: 'output/coverage/cobertura'}},
+                    {type: 'text-summary'}
+                ]
             }
         }
     };
-    grunt.registerTask('coverage:html', 'jasmine:istanbulHtml');
-    gruntConfig.jasmine.istanbulCobertura = {
-        src: gruntConfig.jasmine.istanbulHtml.src,
-        options: {
-            specs: gruntConfig.jasmine.istanbulHtml.options.specs,
-            template: gruntConfig.jasmine.istanbulHtml.options.template,
-            templateOptions: {
-                coverage: gruntConfig.jasmine.istanbulHtml.options.template,
-                report: {
-                    type: 'cobertura',
-                    options: {
-                        dir: 'output/coverage/cobertura'
-                    }
-                }
-            }
-        }
-    };
-    grunt.registerTask('coverage:cobertura', 'jasmine:istanbulCobertura');
-    grunt.registerTask('coverage', ['coverage:html', 'coverage:cobertura']);
+    grunt.registerTask('coverage', 'jasmine:istanbul');
 
     // grunt
     grunt.initConfig(gruntConfig);
