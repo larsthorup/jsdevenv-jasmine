@@ -2,6 +2,7 @@ jsdevenv-jasmine
 ================
 
 [![Build Status](https://travis-ci.org/larsthorup/jsdevenv-jasmine.png)](https://travis-ci.org/larsthorup/jsdevenv-jasmine)
+[![Coverage Status](https://coveralls.io/repos/larsthorup/jsdevenv-jasmine/badge.png?branch=master)](https://coveralls.io/r/larsthorup/jsdevenv-jasmine?branch=master)
 [![devDependency Status](https://david-dm.org/larsthorup/jsdevenv-jasmine/dev-status.png)](https://david-dm.org/larsthorup/jsdevenv-jasmine#info=devDependencies)
 
 A sample build environment for JavaScript projects using Jasmine for testing
