@@ -13,6 +13,7 @@ Prerequisites:
 then
 
     npm install
+    npm install -g grunt-cli
 
 
 From the browser
