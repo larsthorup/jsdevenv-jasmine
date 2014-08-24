@@ -11,7 +11,7 @@ module.exports = function (grunt) {
     grunt.registerTask('all', ['clean', 'lint', 'test', 'coverage']);
 
     // continuous integration
-    grunt.registerTask('ci', ['lint', 'test']);
+    grunt.registerTask('ci', ['lint', 'coverage']);
 
 
     // clean
@@ -73,6 +73,7 @@ module.exports = function (grunt) {
             templateOptions: {
                 coverage: 'output/coverage/coverage.json',
                 report: [
+                    {type: 'lcov', options: {dir: 'output/coverage'}},
                     {type: 'html', options: {dir: 'output/coverage'}},
                     {type: 'cobertura', options: {dir: 'output/coverage/cobertura'}},
                     {type: 'text-summary'}

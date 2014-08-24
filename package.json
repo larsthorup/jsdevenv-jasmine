@@ -15,7 +15,7 @@
         "coveralls": "^2.11.1"
     },
     "scripts": {
-        "coveralls": "cat ./output/coverage/*/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+        "coveralls": "cat ./output/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
         "travis": "grunt ci && npm run coveralls"
     }
 }
