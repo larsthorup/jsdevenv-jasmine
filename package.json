@@ -1,6 +1,6 @@
 {
     "name": "jsdevenv-jasmine",
-    "version": "0.1.1-1",
+    "version": "0.1.2",
     "description": "A sample build environment for JavaScript using Jasmine",
     "author": "Lars Thorup <lars@zealake.com>",
     "engine": "node 1.1.x",
