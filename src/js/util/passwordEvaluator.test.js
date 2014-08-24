@@ -1,4 +1,4 @@
-/*global window describe it expect */
+/*global window, describe, it, expect */
 describe('util.passwordEvaluator', function () {
     'use strict';
 

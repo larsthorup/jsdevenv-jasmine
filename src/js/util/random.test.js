@@ -1,9 +1,9 @@
-/*global Math describe beforeEach spyOn it expect */
+/*global Math, describe, beforeEach, spyOn, it, expect */
 describe('util.random', function () {
     'use strict';
 
     beforeEach(function () {
-        spyOn(Math, 'random').andReturn(0.85);
+        spyOn(Math, 'random').and.returnValue(0.85);
     });
 
     describe('randomBelow', function () {
