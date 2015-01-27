@@ -11,7 +11,7 @@
         "grunt-contrib-jshint": "^0.11.0",
         "grunt-contrib-jasmine": "^0.8.1",
         "grunt-contrib-watch": "^0.6.1",
-        "grunt-template-jasmine-istanbul": "gyandeeps/grunt-template-jasmine-istanbul",
+        "grunt-template-jasmine-istanbul": "^0.3.3",
         "coveralls": "^2.11.1"
     },
     "scripts": {
