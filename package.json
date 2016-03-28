@@ -7,11 +7,11 @@
   "devDependencies": {
     "coveralls": "^2.11.3",
     "grunt": "^0.4.1",
-    "grunt-cli": "^0.1.6",
-    "grunt-contrib-clean": "^0.7.0",
+    "grunt-cli": "^1.1.0",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-jasmine": "^1.0.0",
-    "grunt-contrib-jshint": "^0.12.0",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-template-jasmine-istanbul": "^0.4.0",
     "phantomjs-prebuilt": "^2.1.3"
   },
